@@ -15,8 +15,6 @@ const balanceTotalEl = document.getElementById('balance-total');
 const today = new Date().toISOString().slice(0, 10);
 dateInput.value = today;
 
-let entries = loadEntries();
-
 function loadEntries() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
