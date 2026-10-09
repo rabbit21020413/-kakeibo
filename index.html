@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>かんたん家計簿</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <h1>かんたん家計簿</h1>
+      </header>
+
+      <main class="main">
+        <section class="panel">
+          <h2>家計簿を入力</h2>
+          <form id="entry-form">
+            <div class="form-grid">
+              <label>
+                日付
+                <input type="date" id="date" required />
+              </label>
+
+              <label>
+                区分
+                <select id="type" required>
+                  <option value="expense">支出</option>
+                  <option value="income">収入</option>
+                </select>
+              </label>
+
+              <label>
+                カテゴリ
+                <select id="category" required>
+                  <option value="食費">食費</option>
+                  <option value="住居費">住居費</option>
+                  <option value="交通費">交通費</option>
+                  <option value="光熱費">光熱費</option>
+                  <option value="通信費">通信費</option>
+                  <option value="娯楽費">娯楽費</option>
+                  <option value="給与">給与</option>
+                  <option value="その他">その他</option>
+                </select>
+              </label>
+
+              <label>
+                金額
+                <input type="number" id="amount" min="1" step="1" placeholder="1000" required />
+              </label>
+
+              <label class="wide">
+                内容
+                <input type="text" id="memo" maxlength="50" placeholder="例: スーパーで買い物" required />
+              </label>
+            </div>
+
+            <button type="submit" class="primary-btn">追加する</button>
+          </form>
+        </section>
+
+        <section class="summary-grid">
+          <article class="summary-card income">
+            <span>収入合計</span>
+            <strong id="income-total">¥0</strong>
+          </article>
+          <article class="summary-card expense">
+            <span>支出合計</span>
+            <strong id="expense-total">¥0</strong>
+          </article>
+          <article class="summary-card balance">
+            <span>残高</span>
+            <strong id="balance-total">¥0</strong>
+          </article>
+        </section>
+
+        <section class="panel">
+          <h2>記録一覧</h2>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>日付</th>
+                  <th>区分</th>
+                  <th>カテゴリ</th>
+                  <th>内容</th>
+                  <th>金額</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="entries-body"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
