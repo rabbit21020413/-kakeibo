@@ -50,7 +50,7 @@ function getSeedEntries() {
     },
   ];
 }
-
+let entries = loadEntries();
 function saveEntries() {
   localStorage.setItem(STORAGE_KEY, JSON.stringify(entries));
 }
