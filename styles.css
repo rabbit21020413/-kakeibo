@@ -79,6 +79,7 @@ select {
   border-radius: 10px;
   background: #fff;
   color: var(--text);
+  height: 44px;
 }
 
 .wide {
