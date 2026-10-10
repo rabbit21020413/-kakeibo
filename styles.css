@@ -81,7 +81,15 @@ select {
   color: var(--text);
   height: 44px;
 }
-input[type="date"]{height:44px}
+input[type="date"] {
+
+  height: 44px;
+
+  width: 180px;
+
+  max-width: 100%;
+
+}
 .wide {
   grid-column: 1 / -1;
 }
