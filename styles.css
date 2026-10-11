@@ -86,7 +86,8 @@ input[type="date"] {
   height: 44px;
 
   width: 100% ！important;
-
+  min-width: 0;
+  box-sizing: border-box;
   max-width: 100%;
 
 }
