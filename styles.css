@@ -95,7 +95,7 @@ input[type="date"] {
 .wide {
   grid-column: 1 / -1;
 }
-/* 日付欄の幅調整 */
+/* 日付欄の幅調整2 */
 .primary-btn {
   margin-top: 18px;
   border: none;
