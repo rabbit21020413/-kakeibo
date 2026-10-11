@@ -83,7 +83,7 @@ select {
   height: 44px;
 }
 
-
+input[type="date"] {
   height: 44px;
 
   width: 100% !important;
